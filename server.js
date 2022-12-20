@@ -8,6 +8,10 @@ const { shuffleArray } = require("./utils");
 app.use(express.json());
 app.use(cors());
 
+//This line of code makes my "index.html" file from "public" folder run on the "localhost:4000" url
+app.use(express.static(`${__dirname}/public`))
+
+
 //
 
 app.get("/api/robots", (req, res) => {
